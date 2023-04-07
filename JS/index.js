@@ -7,32 +7,41 @@ console.log('Hello, Mike!')
 // 1 rock, 2 paper, 3 scissors
 function getComputerChoice () {
     let n = Math.floor(Math.random() * 3) + 1;
-    let choice;
+    let compChoice;
     if (n == 1) {
-         choice = 'rock';
+         compChoice = 'rock';
     } else if (n == 2) {
-        choice = 'paper';
+        compChoice = 'paper';
     } else /*if (n == 3)*/ {
-        choice = 'scissors'
+        compChoice = 'scissors'
     }
-    console.log(`ComputerChoice is ${choice}`);
+    console.log(`ComputerChoice is ${compChoice}`);
          /*console.log(`n is ${n}.`);*/
         // return choice;
 }
-getComputerChoice();
-
+// getComputerChoice();
 
     // function for user to select object
-/*function getUserChoice() {
-    let choice = prompt('What will you choose?\n*ROCK~PAPER~SCISSORS*');
-
-    if (choice.toLowerCase() != 'rock' || 'paper' || 'scissors') {
-        console.log(`The user chose ${choice.toLowerCase()}`);
-    } else {
-         getUserChoice();
-    }
-        
-} /* 
+    //this is a silly way to do it but it works
+let userChoice;
+function rock() {
+        // one user clicks button
+        userChoice = 'rock';
+        console.log(`User Selected ${userChoice}.`)
+        getComputerChoice();
+} 
+function paper() {
+    // one user clicks button
+    userChoice = 'paper';
+    console.log(`User Selected ${userChoice}.`)
+    getComputerChoice();
+} 
+function scissors() {
+    // one user clicks button
+    userChoice = 'scissors';
+    console.log(`User Selected ${userChoice}.`)
+    getComputerChoice();
+} 
 
 /*REVERT TO LAST GIT LOG
     commit c93a41f9cae04b65aebc351561ca251abfd95441 (HEAD -> main)

@@ -3,6 +3,14 @@
 
     // TO DO //
     // function for computer to select object
+    let flag = true;
+    // 1 rock, 2 paper, 3 scissors
+    function getComputerChoice () {
+        let choice = Math.floor(Math.random() * 3) + 1;
+        console.log(`The choice is ${choice}.`);
+    }
+
+    getComputerChoice();
     // function for user to select object
     // function to play one round of game
     //  Compares answers & prints winner

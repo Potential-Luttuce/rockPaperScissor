@@ -24,8 +24,17 @@
     // function for user to select object
     function getUserChoice() {
         let choice = prompt('What will you choose?\n*ROCK~PAPER~SCISSORS*');
-        console.log(`The user chose ${choice.toLowerCase()}`);
-    }
+
+        if (choice.toLowerCase() != 'rock' || 'paper' || 'scissors') {
+            console.log(`The user chose ${choice.toLowerCase()}`);
+        } else {
+            getUserChoice();
+        }
+        
+    } /*REVERT TO LAST GIT LOG
+    commit c93a41f9cae04b65aebc351561ca251abfd95441 (HEAD -> main)
+Author: Mike Cuesta <cuestamichael0@gmail.com>
+Date:   Fri Apr 7 01:30:05 2023 -0400*/
     getUserChoice();
 
     // function to play one round of game

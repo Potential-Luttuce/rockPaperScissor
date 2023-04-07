@@ -47,12 +47,6 @@ function scissors() {
     playRound(userChoice, compChoice);
 } 
 
-/*REVERT TO LAST GIT LOG
-    commit c93a41f9cae04b65aebc351561ca251abfd95441 (HEAD -> main)
-Author: Mike Cuesta <cuestamichael0@gmail.com>
-Date:   Fri Apr 7 01:30:05 2023 -0400*/
-//  getUserChoice();
-
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {

@@ -5,11 +5,12 @@ console.log('Hello, Mike!')
 // TO DO //
  // function for computer to select object
 // 1 rock, 2 paper, 3 scissors
+let compchoice;
 function getComputerChoice () {
     let n = Math.floor(Math.random() * 3) + 1;
-    let compChoice;
     if (n == 1) {
          compChoice = 'rock';
+         return 'rock';
     } else if (n == 2) {
         compChoice = 'paper';
     } else /*if (n == 3)*/ {
@@ -29,18 +30,21 @@ function rock() {
         userChoice = 'rock';
         console.log(`User Selected ${userChoice}.`)
         getComputerChoice();
+        playRound(userChoice, compChoice);
 } 
 function paper() {
     // one user clicks button
     userChoice = 'paper';
     console.log(`User Selected ${userChoice}.`)
     getComputerChoice();
+    playRound(userChoice, compChoice);
 } 
 function scissors() {
     // one user clicks button
     userChoice = 'scissors';
     console.log(`User Selected ${userChoice}.`)
     getComputerChoice();
+    playRound(userChoice, compChoice);
 } 
 
 /*REVERT TO LAST GIT LOG
@@ -52,7 +56,6 @@ Date:   Fri Apr 7 01:30:05 2023 -0400*/
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {
-        getUserChoice();
 
         if (userSelection == compSelection) {
             console.log('Tie!');

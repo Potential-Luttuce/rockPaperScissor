@@ -1,6 +1,6 @@
 console.log('Hello, Mike!')
 // open the window with Text "Are you feeling lucky" and default value "sure"
-sign = window.prompt("Would you like to play RockPaperScissors?", "sure"); 
+// sign = window.prompt("Would you like to play RockPaperScissors?", "sure"); 
 
 // TO DO //
  // function for computer to select object

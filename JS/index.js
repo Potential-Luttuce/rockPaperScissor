@@ -16,7 +16,7 @@ function getComputerChoice () {
     } else /*if (n == 3)*/ {
         compChoice = 'scissors'
     }
-    console.log(`ComputerChoice is ${compChoice}`);
+    console.log(`Computer Choice is ${compChoice}`);
          /*console.log(`n is ${n}.`);*/
         // return choice;
 }

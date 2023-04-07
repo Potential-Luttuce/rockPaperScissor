@@ -3,16 +3,34 @@
 
     // TO DO //
     // function for computer to select object
-    let flag = true;
     // 1 rock, 2 paper, 3 scissors
     function getComputerChoice () {
-        let choice = Math.floor(Math.random() * 3) + 1;
-        console.log(`The choice is ${choice}.`);
+        let n = Math.floor(Math.random() * 3) + 1;
+        let choice;
+        if (n == 1) {
+            choice = 'rock';
+        } else if (n == 2) {
+            choice = 'paper';
+        } else /*if (n == 3)*/ {
+            choice = 'scissors'
+        }
+        console.log(`ComputerChoice is ${choice}`);
+         /*console.log(`n is ${n}.`);*/
+        // return choice;
     }
-
     getComputerChoice();
+
+
     // function for user to select object
+    function getUserChoice() {
+        let choice = prompt('What will you choose?\n*ROCK~PAPER~SCISSORS*');
+        console.log(`The user chose ${choice.toLowerCase()}`);
+    }
+    getUserChoice();
+
     // function to play one round of game
+
+
     //  Compares answers & prints winner
 
 

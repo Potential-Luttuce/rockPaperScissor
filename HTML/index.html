@@ -6,21 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike's RockPaperScissors</title>
 
-    <!-- Linking external .js file  -->
+    <!-- Linking external .js file & .css  -->
     <script src="../JS/index.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
-    <h1>Rock~Paper~Scissor</h1>
+    <div class="header">
+        <h1>ROCK~PAPER~SCISSORS</h1>
+    </div>
      <div class="options">
-        <button type='buttpm' id='rock' onclick='document.getElementById("userChoice").innerHTML = 
-        "Player chose ROCK"'>Rock</button>
-        <button id='paper' onclick='document.getElementById("userChoice").innerHTML = 
-        "Player chose PAPER"'>Paper</button>
-        <button id='scissors'>Scissors</button>
-        <p id="userChoice" onclick='document.getElementById("userChoice").innerHTML = 
-        "Player chose SCISSORS"'></p>
+        <div class="rockContainer">
+            <img src="../Images/rock.jpeg" alt="Image of a Rock">
+            <button type='button' id='rock' onclick='document.getElementById("userChoice").innerHTML = 
+            "Player Selected ROCK"'>Rock</button>
+        </div>
+        <div class="paperContainer">
+            <img src="../Images/paper.jpeg" alt="Image of Paper">
+            <button type='button' id='paper' onclick='document.getElementById("userChoice").innerHTML = 
+            "Player Selected PAPER"' src="../Images/paper.jpeg">Paper</button>
+        </div>
+        <div class="scissorsContainer">
+            <img src="../Images/scissors.jpeg" alt="Image of Scissors">
+            <button type ='button' id='scissors' onclick='document.getElementById("userChoice").innerHTML = 
+            "Player Selected SCISSORS"' src="../Images/scissors.jpeg">Scissors</button>
+        </div>
      </div>
 
-     <p id="userChoice">Test</p>
+     <div class="text">
+        <p id="userChoice">Choose Your Fate</p>
+     </div>
 </body>
 </html>

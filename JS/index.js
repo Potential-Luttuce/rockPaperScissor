@@ -49,6 +49,10 @@ function scissors() {
     playRound(userChoice, compChoice);
 } 
 
+    // add border at click to images //
+    function imageBorder(el) {
+        el.style.border = "2px solid rgb(75, 145, 202)";
+    }
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {

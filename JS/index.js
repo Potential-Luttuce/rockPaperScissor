@@ -108,5 +108,7 @@ function getComputerChoice () {
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "YOU!";
         }
+        //show reset button end of game 
+        document.getElementById('resetButton').style.display = 'block';
     }
     //  Compares answers & prints winner

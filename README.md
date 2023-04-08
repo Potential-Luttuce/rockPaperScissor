@@ -1,11 +1,9 @@
 # RockPaperScissor (The Game)
 
 ### This Repo will hold my Rock Paper Scissor project.
-#### For now this game will be played sctrictly in the console - Later on it will have a stunning WebPage to go with it.
+### This game can be played directly after launching site. It is a best of 5 (3 wins and game ends)
+### Google-Chrome Dev tools console shows output for player & computer choices, scores, loss value, and result of game.
 
-- Add a reset button - shows after a selection is made, reshreshes page
-- Current bug in CompFunction where it does not print compChoice to console on random attempts
-- current bur where Rock Rock selections are tie in console but Player win in html
-- Looking to add 
+## To Do / Needs Review
+- Looking to add onclick method where border color for player / comp surrounds selected Img (or button?)
             onclick="winnerColor(this.id)"
-- into click buttons 

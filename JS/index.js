@@ -2,10 +2,13 @@ console.log('Hello, Mike!')
 // open the window with Text "Are you feeling lucky" and default value "sure"
 // sign = window.prompt("Would you like to play RockPaperScissors?", "sure"); 
 
+    
 // TO DO //
+        //RESET //
+
  // function for computer to select object
 // 1 rock, 2 paper, 3 scissors
-let compchoice;
+let compChoice;
 let n;
 function getComputerChoice () {
     n = Math.floor(Math.random() * 3) + 1;
@@ -25,14 +28,14 @@ let userChoice;
 function rock() {
         // one user clicks button
         document.getElementById("userSelection").innerHTML = "Player Selected ROCK";
-        userChoice = 'rock';
+        userChoice = 'ROCK';
         console.log(`User Selected ${userChoice}.`)
         getComputerChoice();
         playRound(userChoice, compChoice);
 } 
 function paper() {
     // one user clicks button
-    userChoice = 'paper';
+    userChoice = 'PAPER';
     document.getElementById("userSelection").innerHTML = "Player Selected PAPER";
     console.log(`User Selected ${userChoice}.`)
     getComputerChoice();
@@ -40,31 +43,80 @@ function paper() {
 } 
 function scissors() {
     // one user clicks button
-    userChoice = 'scissors';
+    userChoice = 'SCISSORS';
     document.getElementById("userSelection").innerHTML = "Player Selected SCISSORS";
     getComputerChoice();
     playRound(userChoice, compChoice);
 } 
 
+    /*/ add border at click to images //***** */
+    function mark(el) {
+        //puts a blue border around image
+        el.style.border = "10px solid blue";
+    }
+    // function imageBorder(el) {
+    //     el.style.border = "2px solid rgb(75, 145, 202)";
+    // }
+
+    // function mark(ID) { //creates border
+    //     document.getElementById(ID).style.border="4px solid orange";
+    // }
+
+    // Change color of text (replacing border idea for now) //
+    let loss = false;
+    function winnerColor(ID) {
+        if (loss == true) {
+            document.getElementById(ID).style.color = '#8f3030';
+        } else if (loss == false) {
+            document.getElementById(ID).style.color = '#4b91ca';
+        } else {
+            document.getElementById(ID).style.color = '#3f46g4';
+        }
+    }
+
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {
+        userSelection = userSelection.toLowerCase();
+        compSelection = compSelection.toLowerCase();
+        let messageRound = 'The winner is...';
 
         if (userSelection == compSelection) {
             console.log('Tie!');
+            loss = 'tie';
         } else if (userSelection == 'rock' && compSelection == 'paper') {
             console.log('You lose! Paper covers Rock!');
+            loss = true;
+            winnerColor();
         } else if (userSelection == 'rock' && compSelection == 'scissors') {
             console.log('You win! Rock crushes Scissors!');
+            loss = false;
         }  else if (userSelection == 'paper' && compSelection == 'scissors') {
             console.log('You lose! Scissor cuts Paper!');
+            loss = true;
         } else if (userSelection == 'paper' && compSelection == 'rock') {
             console.log('You win! Paper covers Rock!');
+            loss = false;
         } else if (userSelection == 'scissors' && compSelection == 'rock') {
             console.log('You Lose! Rock Crushes Scissors');
+            loss = true;
         } else if (userSelection == 'scissors' && compSelection == 'paper') {
             console.log('You win! Scissor cuts Paper!');
+            loss = false;
         }
+
+        if (loss == true) {
+            document.getElementById("winnerMessage").innerHTML = messageRound;
+            document.getElementById("winner").innerHTML = "COMPUTER";
+
+        } else if (loss == null) {
+            document.getElementById("winnerMessage").innerHTML = "...";
+            document.getElementById("winner").innerHTML = "Tie!";
+        } else {
+            document.getElementById("winnerMessage").innerHTML = messageRound;
+            document.getElementById("winner").innerHTML = "YOU!";
+        }
+
     }
     //  Compares answers & prints winner
 

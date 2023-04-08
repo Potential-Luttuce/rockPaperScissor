@@ -72,11 +72,11 @@ function getComputerChoice () {
     }
 
      /// Full game function ///
-     ///first to 5
+     ///first to 3 (best of 5)
      let userScore = 0;
      let compScore = 0;
       function game() { // yes this is silly so be it
-        if (userScore == 5) {
+        if (userScore == 3) {
             document.getElementById('userSelection').innerHTML = `Player Wins! :D`;
             document.getElementById('userSelection').style.fontSize = '35px';
             document.getElementById('compSelection').style.display = 'none';
@@ -85,7 +85,7 @@ function getComputerChoice () {
             document.getElementById('paperButton').style.display = 'none';
             document.getElementById('scissorsButton').style.display = 'none';
             document.getElementById('winner').innerHTML = 'Congratulations!';
-        } else if (compScore == 5) {
+        } else if (compScore == 3) {
             document.getElementById('compSelection').innerHTML = `Computer Wins! [._.]`;
             document.getElementById('compSelection').style.fontSize = '35px';
             document.getElementById('userSelection').style.display = 'none';

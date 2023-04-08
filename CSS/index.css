@@ -40,21 +40,8 @@ button {
     align-items: center;
 }
 
-.textDisplay {
-    font-size: 24px;
-    text-shadow: 2px 2px #fff;
-}
-
-#userSelection {
-    border-bottom: 5px solid #4b91ca;
-}
-
-#compSelection {
-    border-bottom: 5px solid #8f3030;
-}
-
-#message, #roundDisplay {
-    color: rgb(180, 34, 34);
+#message {
+    color: rgb(105, 22, 22);
     font-size: 24px;
     font-weight: bold;
     text-shadow: 2px 2px #fff;

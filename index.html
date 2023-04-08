@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike's RockPaperScissors</title>
     <!-- Linking external .js file & .css  -->
-    <script src="JS/index.js"></script>
-    <link rel="stylesheet" href="CSS/index.css">
+    <script src="../JS/index.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
     <div class="header">
@@ -16,34 +16,22 @@
     <div class="text">
         <p id="roundDisplay">Round 1</p>
         <p id="message">Choose Your Fate!</p>
-        <p id="userSelection" class="textDisplay">Player</p>
-        <p id="compSelection" class="textDisplay">Computer</p>
+        <p id="userSelection" class="hidden">user</p>
+        <p id="compSelection" class="hidden">comp</p>
     </div>
-     <div id="options">
+     <div class="options">
         <div class="rockContainer chosePaper choseScissors">
-            <img id='rockImg' src="Images/rock.jpeg" alt="Image of a Rock">
-            <button type='button' id='button' onclick="rock()" 
-            onclick='winnerColor()'>Rock</button> 
+            <img src="../Images/rock.jpeg" alt="Image of a Rock">
+            <button type='button' id='button'onclick ="rock()"" >Rock</button> 
         </div>
         <div class="paperContainer choseRock choseScissors">
-            <img id='paperImg' type='image' src="Images/paper.jpeg" alt="Image of Paper">
-            <button type='button' id='button' onclick ="paper()"
-            onclick='winnerColor()'>Paper</button>
+            <img src="../Images/paper.jpeg" alt="Image of Paper">
+            <button type='button' id='button' onclick ="paper()">Paper</button>
         </div>
         <div class="scissorsContainer choseRock chosePaper">
-            <img src="Images/scissors.jpeg" alt="Image of Scissors">
-            <button type ='button' id='button' onclick ="scissors()"
-            onclick='winnercolor()'>Scissors</button>
+            <img src="../Images/scissors.jpeg" alt="Image of Scissors">
+            <button type ='button' id='button' onclick ="scissors()" >Scissors</button>
         </div>
      </div>
-
-     <div id="winnerDisplay">
-        <div id="winnerMessage">Who Will Triumph?</div>
-        <div id="winnerBox" style="font-size: 24px;"><p id="winner">x</p></div>
-        </div>
-     </div>
-     <div class='footer' 
-        style="display: flex; justify-content: center;font-size:12px;color:aliceblue"
-        >Michael Cuesta @ Potential_Lettuce</div>
 </body>
 </html>

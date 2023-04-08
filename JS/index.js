@@ -6,8 +6,9 @@ console.log('Hello, Mike!')
  // function for computer to select object
 // 1 rock, 2 paper, 3 scissors
 let compchoice;
+let n;
 function getComputerChoice () {
-    let n = Math.floor(Math.random() * 3) + 1;
+    n = Math.floor(Math.random() * 3) + 1;
     if (n == 1) {
          compChoice = 'rock';
          return 'rock';
@@ -30,6 +31,7 @@ function rock() {
         userChoice = 'rock';
         console.log(`User Selected ${userChoice}.`)
         getComputerChoice();
+        displayChoices();
         playRound(userChoice, compChoice);
 } 
 function paper() {
@@ -42,11 +44,12 @@ function paper() {
 function scissors() {
     // one user clicks button
     userChoice = 'scissors';
-    console.log(`User Selected ${userChoice}.`)
     getComputerChoice();
     playRound(userChoice, compChoice);
 } 
 
+    // Display Choices function //
+  
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {

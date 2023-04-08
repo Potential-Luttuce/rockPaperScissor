@@ -14,31 +14,33 @@
     <div class="header">
         <h1>ROCK~PAPER~SCISSORS</h1>
     </div>
+    <div class="text">
+        <p id="message">Choose Your Fate!</p>
+        <p id="userSelection" class="hidden">user</p>
+        <p id="compSelection" class="hidden">comp</p>
+    </div>
      <div class="options">
         <div class="rockContainer chosePaper choseScissors">
             <img src="../Images/rock.jpeg" alt="Image of a Rock">
-            <button type='button' id='rock' onclick ="rock()" 
+            <button type='button' id='button'
             onclick='document.getElementById("userSelection").innerHTML = 
-            "Player Selected ROCK"'>Rock</button>
+            "Player Selected ROCK"'
+            onclick ="rock()" >Rock</button>
         </div>
         <div class="paperContainer choseRock choseScissors">
             <img src="../Images/paper.jpeg" alt="Image of Paper">
-            <button type='button' id='paper' onclick ="paper()" 
+            <button type='button' id='button' onclick ="paper()" 
             onclick='document.getElementById("userChoice").innerHTML = 
             "Player Selected PAPER"' src="../Images/paper.jpeg">Paper</button>
         </div>
         <div class="scissorsContainer choseRock chosePaper">
             <img src="../Images/scissors.jpeg" alt="Image of Scissors">
-            <button type ='button' id='scissors' onclick ="scissors()" 
+            <button type ='button' id='button' onclick ="scissors()" 
             onclick='document.getElementById("userChoice").innerHTML = 
-            "Player Selected SCISSORS"' src="../Images/scissors.jpeg">Scissors</button>
+            "Player Selected SCISSORS"' src="../Images/scissors.jpeg"
+            onclick='document.getElementById("userSelection").innerHTMl = 
+            "User Selected ${userChoice}."'>Scissors</button>
         </div>
-     </div>
-
-     <div class="text">
-        <p id="message">Choose Your Fate!</p>
-        <p id="userSelection" class="hidden">user</p>
-        <p id="compSelection" class="hidden">comp</p>
      </div>
 </body>
 </html>

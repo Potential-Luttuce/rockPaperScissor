@@ -34,14 +34,24 @@ button {
     background: black;
 }
 
+
 .text {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-#message {
-    color: rgb(105, 22, 22);
+.textDisplay {
+    font-size: 24px;
+    text-shadow: 2px 2px #fff;
+}
+#userSelection {
+    border-bottom: 5px solid #4b91ca;
+}
+#compSelection {
+    border-bottom: 5px solid #8f3030;
+}
+#message, #roundDisplay {
+    color: rgb(180, 34, 34);
     font-size: 24px;
     font-weight: bold;
     text-shadow: 2px 2px #fff;
@@ -73,4 +83,3 @@ button {
 #winner {
     background: rgb(167, 165, 165);
 }
-

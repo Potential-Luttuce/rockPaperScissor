@@ -1,10 +1,9 @@
 console.log('Hello, Mike!')
 // open the window with Text "Are you feeling lucky" and default value "sure"
 // sign = window.prompt("Would you like to play RockPaperScissors?", "sure"); 
-
+    
 // TO DO //
         //RESET //
-
  // function for computer to select object
 // 1 rock, 2 paper, 3 scissors
 let compChoice;
@@ -21,7 +20,6 @@ function getComputerChoice () {
     console.log(`Computer Choice is ${compChoice}`);
     document.getElementById("compSelection").innerHTML = `Computer Selected ${compChoice}`;
 }
-
     // function for user to select object  //this is a silly way to do it but it works
 let userChoice;
 function rock() {
@@ -48,6 +46,7 @@ function scissors() {
     playRound(userChoice, compChoice);
 } 
 
+    // add border at click to images //
     /*/ add border at click to images //***** */
     function mark(el) {
         //puts a blue border around image
@@ -56,11 +55,9 @@ function scissors() {
     // function imageBorder(el) {
     //     el.style.border = "2px solid rgb(75, 145, 202)";
     // }
-
     // function mark(ID) { //creates border
     //     document.getElementById(ID).style.border="4px solid orange";
     // }
-
     // Change color of text (replacing border idea for now) //
     let loss = false;
     function winnerColor(ID) {
@@ -72,14 +69,11 @@ function scissors() {
             document.getElementById(ID).style.color = '#3f46g4';
         }
     }
-
     // function to play one round of game
-
     function playRound(userSelection, compSelection) {
         userSelection = userSelection.toLowerCase();
         compSelection = compSelection.toLowerCase();
         let messageRound = 'The winner is...';
-
         if (userSelection == compSelection) {
             console.log('Tie!');
             loss = 'tie';
@@ -103,11 +97,9 @@ function scissors() {
             console.log('You win! Scissor cuts Paper!');
             loss = false;
         }
-
         if (loss == true) {
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "COMPUTER";
-
         } else if (loss == null) {
             document.getElementById("winnerMessage").innerHTML = "...";
             document.getElementById("winner").innerHTML = "Tie!";
@@ -115,7 +107,5 @@ function scissors() {
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "YOU!";
         }
-
     }
     //  Compares answers & prints winner
-

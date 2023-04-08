@@ -28,15 +28,16 @@ function getComputerChoice () {
 let userChoice;
 function rock() {
         // one user clicks button
+        document.getElementById("userSelection").innerHTML = "Player Selected ROCK";
         userChoice = 'rock';
         console.log(`User Selected ${userChoice}.`)
         getComputerChoice();
-        displayChoices();
         playRound(userChoice, compChoice);
 } 
 function paper() {
     // one user clicks button
     userChoice = 'paper';
+    document.getElementById("userSelection").innerHTML = "Player Selected PAPER";
     console.log(`User Selected ${userChoice}.`)
     getComputerChoice();
     playRound(userChoice, compChoice);
@@ -44,6 +45,7 @@ function paper() {
 function scissors() {
     // one user clicks button
     userChoice = 'scissors';
+    document.getElementById("userSelection").innerHTML = "Player Selected SCISSORS";
     getComputerChoice();
     playRound(userChoice, compChoice);
 } 

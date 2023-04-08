@@ -4,7 +4,32 @@ console.log('Hello, Mike!')
     
 // TO DO //
         //RESET //
- // function for computer to select object
+
+    // function for user to select object  //this is a silly way to do it but it works
+let userChoice;
+function rock() {
+        document.getElementById("userSelection").innerHTML = "Player Selected ROCK";
+        userChoice = 'rock';
+        console.log(`User Selected ${userChoice.toUpperCase()}.`)
+        getComputerChoice();
+        playRound(userChoice, compChoice);
+} 
+function paper() {
+    userChoice = 'paper';
+    document.getElementById("userSelection").innerHTML = "Player Selected PAPER";
+    console.log(`User Selected ${userChoice.toUpperCase()}.`)
+    getComputerChoice();
+    playRound(userChoice, compChoice);
+} 
+function scissors() {
+    userChoice = 'scissors';
+    document.getElementById("userSelection").innerHTML = "Player Selected SCISSORS";
+    console.log(`User Selected ${userChoice.toUpperCase()}.`)
+    getComputerChoice();
+    playRound(userChoice, compChoice);
+} 
+
+// function for computer to select object
 // 1 rock, 2 paper, 3 scissors
 let compChoice;
 let n;
@@ -18,33 +43,9 @@ function getComputerChoice () {
         compChoice = 'SCISSORS'
     }
     console.log(`Computer Choice is ${compChoice}`);
+    console.log(`n is ${n}`);
     document.getElementById("compSelection").innerHTML = `Computer Selected ${compChoice}`;
 }
-    // function for user to select object  //this is a silly way to do it but it works
-let userChoice;
-function rock() {
-        // one user clicks button
-        document.getElementById("userSelection").innerHTML = "Player Selected ROCK";
-        userChoice = 'ROCK';
-        console.log(`User Selected ${userChoice}.`)
-        getComputerChoice();
-        playRound(userChoice, compChoice);
-} 
-function paper() {
-    // one user clicks button
-    userChoice = 'PAPER';
-    document.getElementById("userSelection").innerHTML = "Player Selected PAPER";
-    console.log(`User Selected ${userChoice}.`)
-    getComputerChoice();
-    playRound(userChoice, compChoice);
-} 
-function scissors() {
-    // one user clicks button
-    userChoice = 'SCISSORS';
-    document.getElementById("userSelection").innerHTML = "Player Selected SCISSORS";
-    getComputerChoice();
-    playRound(userChoice, compChoice);
-} 
 
     // add border at click to images //
     /*/ add border at click to images //***** */

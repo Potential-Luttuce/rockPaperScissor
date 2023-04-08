@@ -15,14 +15,15 @@
         <h1>ROCK~PAPER~SCISSORS</h1>
     </div>
     <div class="text">
+        <p id="roundDisplay">Round 1</p>
         <p id="message">Choose Your Fate!</p>
-        <p id="userSelection" class="hidden">user</p>
-        <p id="compSelection" class="hidden">comp</p>
+        <p id="userSelection" class="textDisplay">Player</p>
+        <p id="compSelection" class="textDisplay">Computer</p>
     </div>
      <div class="options">
         <div class="rockContainer chosePaper choseScissors">
             <img src="../Images/rock.jpeg" alt="Image of a Rock">
-            <button type='button' id='button'onclick ="rock()"" >Rock</button> 
+            <button type='button' id='button'onclick ="rock()" >Rock</button> 
         </div>
         <div class="paperContainer choseRock choseScissors">
             <img src="../Images/paper.jpeg" alt="Image of Paper">
@@ -31,6 +32,11 @@
         <div class="scissorsContainer choseRock chosePaper">
             <img src="../Images/scissors.jpeg" alt="Image of Scissors">
             <button type ='button' id='button' onclick ="scissors()" >Scissors</button>
+        </div>
+     </div>
+
+     <div id="winnerDisplay">
+        <div id="winnerBox"></div>
         </div>
      </div>
 </body>

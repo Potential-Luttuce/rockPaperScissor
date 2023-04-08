@@ -2,7 +2,10 @@ console.log('Hello, Mike!')
 // open the window with Text "Are you feeling lucky" and default value "sure"
 // sign = window.prompt("Would you like to play RockPaperScissors?", "sure"); 
 
+    
 // TO DO //
+        //RESET //
+
  // function for computer to select object
 // 1 rock, 2 paper, 3 scissors
 let compchoice;
@@ -52,6 +55,7 @@ function scissors() {
 
         if (userSelection == compSelection) {
             console.log('Tie!');
+            //
         } else if (userSelection == 'rock' && compSelection == 'paper') {
             console.log('You lose! Paper covers Rock!');
         } else if (userSelection == 'rock' && compSelection == 'scissors') {

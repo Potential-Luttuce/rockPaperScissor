@@ -10,21 +10,17 @@ let n;
 function getComputerChoice () {
     n = Math.floor(Math.random() * 3) + 1;
     if (n == 1) {
-         compChoice = 'rock';
-         return 'rock';
+         compChoice = 'ROCK';
     } else if (n == 2) {
-        compChoice = 'paper';
+        compChoice = 'PAPER';
     } else /*if (n == 3)*/ {
-        compChoice = 'scissors'
+        compChoice = 'SCISSORS'
     }
     console.log(`Computer Choice is ${compChoice}`);
-         /*console.log(`n is ${n}.`);*/
-        // return choice;
+    document.getElementById("compSelection").innerHTML = `Computer Selected ${compChoice}`;
 }
-// getComputerChoice();
 
-    // function for user to select object
-    //this is a silly way to do it but it works
+    // function for user to select object  //this is a silly way to do it but it works
 let userChoice;
 function rock() {
         // one user clicks button
@@ -50,8 +46,6 @@ function scissors() {
     playRound(userChoice, compChoice);
 } 
 
-    // Display Choices function //
-  
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {

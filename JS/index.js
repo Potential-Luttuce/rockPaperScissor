@@ -8,7 +8,7 @@ console.log('Hello, Mike!')
     // function for user to select object  //this is a silly way to do it but it works
 let userChoice;
 function rock() {
-        document.getElementById("userSelection").innerHTML = "Player Selected ROCK";
+        document.getElementById("userSelection").innerHTML = "Player Selected: ROCK";
         userChoice = 'rock';
         console.log(`User Selected ${userChoice.toUpperCase()}.`)
         getComputerChoice();
@@ -16,14 +16,14 @@ function rock() {
 } 
 function paper() {
     userChoice = 'paper';
-    document.getElementById("userSelection").innerHTML = "Player Selected PAPER";
+    document.getElementById("userSelection").innerHTML = "Player Selected: PAPER";
     console.log(`User Selected ${userChoice.toUpperCase()}.`)
     getComputerChoice();
     playRound(userChoice, compChoice);
 } 
 function scissors() {
     userChoice = 'scissors';
-    document.getElementById("userSelection").innerHTML = "Player Selected SCISSORS";
+    document.getElementById("userSelection").innerHTML = "Player Selected: SCISSORS";
     console.log(`User Selected ${userChoice.toUpperCase()}.`)
     getComputerChoice();
     playRound(userChoice, compChoice);
@@ -44,7 +44,7 @@ function getComputerChoice () {
     }
     console.log(`Computer Choice is ${compChoice}`);
     console.log(`n is ${n}`);
-    document.getElementById("compSelection").innerHTML = `Computer Selected ${compChoice}`;
+    document.getElementById("compSelection").innerHTML = `Computer Selected: ${compChoice}`;
 }
 
     // add border at click to images //
@@ -81,7 +81,6 @@ function getComputerChoice () {
         } else if (userSelection == 'rock' && compSelection == 'paper') {
             console.log('You lose! Paper covers Rock!');
             loss = true;
-            winnerColor();
         } else if (userSelection == 'rock' && compSelection == 'scissors') {
             console.log('You win! Rock crushes Scissors!');
             loss = false;
@@ -98,10 +97,11 @@ function getComputerChoice () {
             console.log('You win! Scissor cuts Paper!');
             loss = false;
         }
+
         if (loss == true) {
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "COMPUTER";
-        } else if (loss == null) {
+        } else if (loss == 'tie') {
             document.getElementById("winnerMessage").innerHTML = "...";
             document.getElementById("winner").innerHTML = "Tie!";
         } else {

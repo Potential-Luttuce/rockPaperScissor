@@ -20,18 +20,28 @@
         <p id="userSelection" class="textDisplay">Player</p>
         <p id="compSelection" class="textDisplay">Computer</p>
     </div>
+    <div id="scores" style="color:aliceblue">
+        <div class="player">
+            <p id="userScoreStatus">Player Score: </p>
+            <p id="userScore"></p>
+        </div>
+        <div class="computer">
+            <p id="compScoreStatus">Computer Score: </p>
+            <p id="compScore"></p>
+        </div>
+    </div>
      <div id="options"> 
         <div class="rockContainer chosePaper choseScissors">
             <img id='rockImg' src="Images/rock.jpeg" alt="Image of a Rock">
-            <button type='button' id='button'onclick ="rock()">Rock</button> 
+            <button type='button' id='rockButton' onclick ="rock()">Rock</button> 
         </div>
         <div class="paperContainer choseRock choseScissors">
             <img id='paperImg' type='image' src="Images/paper.jpeg" alt="Image of Paper">
-            <button type='button' id='button' onclick ="paper()">Paper</button>
+            <button type='button' id='paperButton' onclick ="paper()">Paper</button>
         </div>
         <div class="scissorsContainer choseRock chosePaper">
             <img src="Images/scissors.jpeg" alt="Image of Scissors">
-            <button type ='button' id='button' onclick ="scissors()">Scissors</button>
+            <button type ='button' id='scissorsButton' onclick ="scissors()">Scissors</button>
         </div>
      </div>
      <div id="winnerDisplay">

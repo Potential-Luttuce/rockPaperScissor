@@ -12,7 +12,7 @@ function rock() {
         userChoice = 'rock';
         console.log(`User Selected ${userChoice.toUpperCase()}.`)
         getComputerChoice();
-        playRound(userChoice, compChoice);
+        playRound(userSelection, compSelection);
 } 
 function paper() {
     userChoice = 'paper';
@@ -36,11 +36,11 @@ let n;
 function getComputerChoice () {
     n = Math.floor(Math.random() * 3) + 1;
     if (n == 1) {
-         compChoice = 'ROCK';
+         compChoice = 'rock';
     } else if (n == 2) {
-        compChoice = 'PAPER';
+        compChoice = 'paper';
     } else /*if (n == 3)*/ {
-        compChoice = 'SCISSORS'
+        compChoice = 'scissors'
     }
     console.log(`Computer Choice is ${compChoice}`);
     console.log(`n is ${n}`);
@@ -70,10 +70,37 @@ function getComputerChoice () {
             document.getElementById(ID).style.color = '#3f46g4';
         }
     }
+
+     /// Full game function ///
+     ///first to 5
+     let userScore = 0;
+     let compScore = 0;
+      function game() { // yes this is silly so be it
+        if (userScore == 5) {
+            document.getElementById('userSelection').innerHTML = `Player Wins! :D`;
+            document.getElementById('userSelection').style.fontSize = '35px';
+            document.getElementById('compSelection').style.display = 'none';
+            document.getElementById('winnerMessage').style.display = 'none';
+            document.getElementById('rockButton').style.display = 'none';
+            document.getElementById('paperButton').style.display = 'none';
+            document.getElementById('scissorsButton').style.display = 'none';
+            document.getElementById('winner').innerHTML = 'Congratulations!';
+        } else if (compScore == 5) {
+            document.getElementById('compSelection').innerHTML = `Computer Wins! [._.]`;
+            document.getElementById('compSelection').style.fontSize = '35px';
+            document.getElementById('userSelection').style.display = 'none';
+            document.getElementById('winnerMessage').style.display = 'none';
+            document.getElementById('rockButton').style.display = 'none';
+            document.getElementById('paperButton').style.display = 'none';
+            document.getElementById('scissorsButton').style.display = 'none';
+            document.getElementById('winner').innerHTML = 'Better Luck Next Time!';
+        }
+      }
+
     // function to play one round of game
+    //  Compares answers & prints winner
+    let currentRound;
     function playRound(userSelection, compSelection) {
-        userSelection = userSelection.toLowerCase();
-        compSelection = compSelection.toLowerCase();
         let messageRound = 'The winner is...';
         if (userSelection == compSelection) {
             console.log('Tie!');
@@ -98,17 +125,36 @@ function getComputerChoice () {
             loss = false;
         }
 
-        if (loss == true) {
+        if (loss == true) { //Computer wins
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "COMPUTER";
-        } else if (loss == 'tie') {
+            compScore++;
+            document.getElementById('compScore').innerHTML = ` ${compScore}`;
+            currentRound = userScore + compScore;
+            document.getElementById('roundDisplay').innerHTML = `Round ${currentRound}`;
+            console.log(`user score = ${userScore}`);
+            console.log(`comp Score = ${compScore}`);
+            console.log(`loss = ${loss}`);
+        } else if (loss == 'tie') { //Tie outcome
             document.getElementById("winnerMessage").innerHTML = "...";
             document.getElementById("winner").innerHTML = "Tie!";
-        } else {
+            currentRound = userScore + compScore;
+            document.getElementById('roundDisplay').innerHTML = `Round ${currentRound}`;
+            console.log(`user score = ${userScore}`);
+            console.log(`comp Score = ${compScore}`);
+            console.log(`loss = ${loss}`);
+        } else { // Player/user wins
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "YOU!";
+            userScore++;
+            document.getElementById('userScore').innerHTML = ` ${userScore}`;
+            currentRound = userScore + compScore;
+            document.getElementById('roundDisplay').innerHTML = `Round ${currentRound}`;
+            console.log(`user score = ${userScore}`);
+            console.log(`comp Score = ${compScore}`);
+            console.log(`loss = ${loss}`);
         }
+        game();
         //show reset button end of game 
         document.getElementById('resetButton').style.display = 'block';
     }
-    //  Compares answers & prints winner

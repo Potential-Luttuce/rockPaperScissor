@@ -34,8 +34,6 @@ button {
     background: black;
     border-radius: 5px;
 }
-
-
 .text {
     display: flex;
     flex-direction: column;
@@ -44,6 +42,11 @@ button {
 .textDisplay {
     font-size: 24px;
     text-shadow: 2px 2px #fff;
+}
+.player,
+.computer {
+    display: flex;
+    justify-content: center;
 }
 #userSelection {
     border-bottom: 5px solid #4b91ca;
@@ -76,6 +79,7 @@ button {
     border: 5px solid goldenrod;
     width: 200px;
     height: 50px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items:center;

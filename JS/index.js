@@ -49,7 +49,7 @@ function scissors() {
     playRound(userChoice, compChoice);
 } 
 
-    // add border at click to images //
+    /*/ add border at click to images //***** */
     function mark(el) {
         //puts a blue border around image
         el.style.border = "10px solid blue";

@@ -38,7 +38,7 @@ button {
     align-items: center;
 }
 
-#message {
+#message, #round {
     color: rgb(105, 22, 22);
     font-size: 24px;
     font-weight: bold;

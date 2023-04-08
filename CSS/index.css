@@ -1,6 +1,7 @@
 *{
     /* border: 1px solid black; */
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgb(8, 31, 73);
 }
 
 .header {
@@ -44,5 +45,5 @@ button {
 }
 
 .hidden {
-    display: none;
+    /* display: none; */
 }

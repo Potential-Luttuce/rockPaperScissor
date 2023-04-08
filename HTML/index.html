@@ -15,19 +15,22 @@
         <h1>ROCK~PAPER~SCISSORS</h1>
     </div>
      <div class="options">
-        <div class="rockContainer">
+        <div class="rockContainer chosePaper choseScissors">
             <img src="../Images/rock.jpeg" alt="Image of a Rock">
-            <button type='button' id='rock' onclick ="rock()" onclick='document.getElementById("userChoice").innerHTML = 
+            <button type='button' id='rock' onclick ="rock()" 
+            onclick='document.getElementById("userSelection").innerHTML = 
             "Player Selected ROCK"'>Rock</button>
         </div>
-        <div class="paperContainer">
+        <div class="paperContainer choseRock choseScissors">
             <img src="../Images/paper.jpeg" alt="Image of Paper">
-            <button type='button' id='paper' onclick ="paper()" onclick='document.getElementById("userChoice").innerHTML = 
+            <button type='button' id='paper' onclick ="paper()" 
+            onclick='document.getElementById("userChoice").innerHTML = 
             "Player Selected PAPER"' src="../Images/paper.jpeg">Paper</button>
         </div>
-        <div class="scissorsContainer">
+        <div class="scissorsContainer choseRock chosePaper">
             <img src="../Images/scissors.jpeg" alt="Image of Scissors">
-            <button type ='button' id='scissors' onclick ="scissors()" onclick='document.getElementById("userChoice").innerHTML = 
+            <button type ='button' id='scissors' onclick ="scissors()" 
+            onclick='document.getElementById("userChoice").innerHTML = 
             "Player Selected SCISSORS"' src="../Images/scissors.jpeg">Scissors</button>
         </div>
      </div>

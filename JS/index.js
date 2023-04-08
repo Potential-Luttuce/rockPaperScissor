@@ -28,14 +28,14 @@ let userChoice;
 function rock() {
         // one user clicks button
         document.getElementById("userSelection").innerHTML = "Player Selected ROCK";
-        userChoice = 'rock';
+        userChoice = 'ROCK';
         console.log(`User Selected ${userChoice}.`)
         getComputerChoice();
         playRound(userChoice, compChoice);
 } 
 function paper() {
     // one user clicks button
-    userChoice = 'paper';
+    userChoice = 'PAPER';
     document.getElementById("userSelection").innerHTML = "Player Selected PAPER";
     console.log(`User Selected ${userChoice}.`)
     getComputerChoice();
@@ -43,7 +43,7 @@ function paper() {
 } 
 function scissors() {
     // one user clicks button
-    userChoice = 'scissors';
+    userChoice = 'SCISSORS';
     document.getElementById("userSelection").innerHTML = "Player Selected SCISSORS";
     getComputerChoice();
     playRound(userChoice, compChoice);
@@ -52,23 +52,45 @@ function scissors() {
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {
+        userSelection = userSelection.toLowerCase();
+        compSelection = compSelection.toLowerCase();
+        let loss;
+        let messageRound = 'The winner is...';
 
         if (userSelection == compSelection) {
             console.log('Tie!');
-            //
+            loss = null;
         } else if (userSelection == 'rock' && compSelection == 'paper') {
             console.log('You lose! Paper covers Rock!');
+            loss = true;
         } else if (userSelection == 'rock' && compSelection == 'scissors') {
             console.log('You win! Rock crushes Scissors!');
+            loss = false;
         }  else if (userSelection == 'paper' && compSelection == 'scissors') {
             console.log('You lose! Scissor cuts Paper!');
+            loss = true;
         } else if (userSelection == 'paper' && compSelection == 'rock') {
             console.log('You win! Paper covers Rock!');
+            loss = false;
         } else if (userSelection == 'scissors' && compSelection == 'rock') {
             console.log('You Lose! Rock Crushes Scissors');
+            loss = true;
         } else if (userSelection == 'scissors' && compSelection == 'paper') {
             console.log('You win! Scissor cuts Paper!');
+            loss = false;
         }
+
+        if (loss == true) {
+            document.getElementById("winnerMessage").innerHTML = messageRound;
+            document.getElementById("winner").innerHTML = "COMPUTER";
+        } else if (loss == null) {
+            document.getElementById("winnerMessage").innerHTML = "...";
+            document.getElementById("winner").innerHTML = "Tie!";
+        } else {
+            document.getElementById("winnerMessage").innerHTML = messageRound;
+            document.getElementById("winner").innerHTML = "YOU!";
+        }
+
     }
     //  Compares answers & prints winner
 

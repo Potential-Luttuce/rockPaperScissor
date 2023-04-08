@@ -8,7 +8,7 @@ console.log('Hello, Mike!')
 
  // function for computer to select object
 // 1 rock, 2 paper, 3 scissors
-let compchoice;
+let compChoice;
 let n;
 function getComputerChoice () {
     n = Math.floor(Math.random() * 3) + 1;
@@ -50,23 +50,44 @@ function scissors() {
 } 
 
     // add border at click to images //
-    function imageBorder(el) {
-        el.style.border = "2px solid rgb(75, 145, 202)";
+    function mark(el) {
+        //puts a blue border around image
+        el.style.border = "10px solid blue";
     }
+    // function imageBorder(el) {
+    //     el.style.border = "2px solid rgb(75, 145, 202)";
+    // }
+
+    // function mark(ID) { //creates border
+    //     document.getElementById(ID).style.border="4px solid orange";
+    // }
+
+    // Change color of text (replacing border idea for now) //
+    let loss = false;
+    function winnerColor(ID) {
+        if (loss == true) {
+            document.getElementById(ID).style.color = '#8f3030';
+        } else if (loss == false) {
+            document.getElementById(ID).style.color = '#4b91ca';
+        } else {
+            document.getElementById(ID).style.color = '#3f46g4';
+        }
+    }
+
     // function to play one round of game
 
     function playRound(userSelection, compSelection) {
         userSelection = userSelection.toLowerCase();
         compSelection = compSelection.toLowerCase();
-        let loss;
         let messageRound = 'The winner is...';
 
         if (userSelection == compSelection) {
             console.log('Tie!');
-            loss = null;
+            loss = 'tie';
         } else if (userSelection == 'rock' && compSelection == 'paper') {
             console.log('You lose! Paper covers Rock!');
             loss = true;
+            winnerColor();
         } else if (userSelection == 'rock' && compSelection == 'scissors') {
             console.log('You win! Rock crushes Scissors!');
             loss = false;
@@ -87,6 +108,7 @@ function scissors() {
         if (loss == true) {
             document.getElementById("winnerMessage").innerHTML = messageRound;
             document.getElementById("winner").innerHTML = "COMPUTER";
+
         } else if (loss == null) {
             document.getElementById("winnerMessage").innerHTML = "...";
             document.getElementById("winner").innerHTML = "Tie!";

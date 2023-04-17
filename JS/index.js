@@ -79,6 +79,8 @@ function getComputerChoice () {
         if (userScore == 3) {
             document.getElementById('userSelection').innerHTML = `Player Wins! :D`;
             document.getElementById('userSelection').style.fontSize = '35px';
+            document.getElementById('roundDisplay').style.display = 'none';
+            document.getElementById('message').style.display = 'none';
             document.getElementById('compSelection').style.display = 'none';
             document.getElementById('winnerMessage').style.display = 'none';
             document.getElementById('rockButton').style.display = 'none';
@@ -88,6 +90,8 @@ function getComputerChoice () {
         } else if (compScore == 3) {
             document.getElementById('compSelection').innerHTML = `Computer Wins! [._.]`;
             document.getElementById('compSelection').style.fontSize = '35px';
+            document.getElementById('roundDisplay').style.display = 'none';
+            document.getElementById('message').style.display = 'none';
             document.getElementById('userSelection').style.display = 'none';
             document.getElementById('winnerMessage').style.display = 'none';
             document.getElementById('rockButton').style.display = 'none';
